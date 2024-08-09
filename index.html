@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Document</title>
 
+    <link rel="stylesheet" href="/public/css/variable.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -23,55 +24,69 @@
 
     <!-- Start Header -->
     <header>
-        <div class="max-w-[1200px] mx-auto flex justify-between items-center p-3">
-            <div class="text-sm">You are a student and students get 20% discount. <a  href="#" class="font-semibold underline capitalize">Learn More</a></div>
+        <div class="max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto hidden md:flex md:justify-end lg:justify-between items-center py-3">
+            <div class="hidden lg:block text-sm">You are a student and students get 20% discount. <a  href="#" class="font-semibold underline capitalize">Learn More</a></div>
             <ul class="flex justify-end items-center gap-[20px] text-sm capitalize">
-                <li>Store Locator</li>
-                <li>Order Tracking</li>
-                <li>FAQs</li>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Order Tracking</a></li>
+                <li><a href="#">FAQs</a></li>
                 <li class="w-[0.5px] h-3 bg-slate-300"></li>
-                <li class="flex items-center gap-1"><span>English</span> <img src="/public/icons/.png" alt=""></li>
-                <li class="flex items-center gap-1"><span>USD</span> <img src="/public/icons/.png" alt=""></li>
+                <li><a href="#" class="flex items-center gap-1"><span>English</span> <img src="/public/icons/.png" alt=""></a></li>
+                <li><a href="#" class="flex items-center gap-1"><span>USD</span> <img src="/public/icons/.png" alt=""></a></li>
             </ul>
         </div>
         <div class="border-t-2 border-[#E5E8EC]"></div>
-        <div class="max-w-[1200px] mx-auto flex justify-between items-center">
-            <div class="w-[15%]">
-                <img src="/public/icons/Logo.svg" alt="">
+        <div class="max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto flex justify-between items-center my-4">
+            <a href="#" class="md:w-auto lg:w-[15%] mr-2 md:mr-5 lg:mr-6 xl:mr-20">
+                <img src="/public/icons/Logo.svg" alt="" class="max-w-full">
+            </a>
+            <div class="w-[60%] flex items-center  justify-between rounded border md:h-[40px] lg:h[45px] xl:h-[50px]">
+                <div class="relative hidden xl:block min-w-[160px] group">
+                    <div class="flex items-center">
+                      <span class="text-black text-md font-semibold px-4 py-3 rounded w-full flex items-center justify-between cursor-pointer bg-white gap-1">
+                        All categories
+                      </span>
+                      <img src="/public/icons/.png" alt="">
+                    </div>
+                    <div class="absolute rounded bg-white top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 max-h--[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible">
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">All Categories</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">Phone</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                    </div>
+                </div>
+                <div class="hidden xl:block w-[0.5px] h-3 bg-slate-300"></div>
+                <input class="px-2 md:px-5 xl:px-0 lg:w-full xl:w-[270px] outline-none text-sm md:text-md" type="text" placeholder="Search in 200+ products...">
+                <button class="bg-[#2B38D1] py-2 px-2 md:px-3 lg:px-5 xl:px-8 text-white lg:h-[40px] xl:h-[50px] rounded-r hover-shadow text-sm md:text-md" id="btn-search">Search</button>
             </div>
-            <div class="w-[60%]">
-                <select name="" id=""></select>
-                <input type="text" placeholder="Search in 200+ products...">
-                <button>Search</button>
-            </div>
-            <div class="w-[35%] flex justify-center items-center gap-6">
-                <div class="flex justify-center items-center gap-2">
+            <div class="w-[35%] flex justify-end items-center md:ml-2 gap-4 md:gap-4 lg:gap-6 xl:gap-8">
+                <a href="#" class="flex justify-center items-center gap-2">
                     <img src="/public/icons/icon.png" alt="">
-                    <div>
+                    <div class="hidden md:block">
                         <div class="text-xs text-[#515D66] leading-[6px]">Login</div>
                         <div class="font-semibold">Account</div>
                     </div>
-                </div>
-                <div class="relative">
+                </a>
+                <a href="#" class="hidden lg:block relative">
                     <img src="/public/icons/hearth.png" alt="">
                     <div class="absolute top-[-11px] right-[-11px]">
                         <span class="bg-[#DD3842] py-[1px] px-[7px] rounded-full text-white text-xs">2</span>
                     </div>
-                </div>
-                <div class="flex justify-center items-center gap-4">
+                </a>
+                <a href="#" class="flex justify-center items-center gap-4">
                     <div class="relative">
                         <img src="/public/icons/cart.png" alt="">
                         <div class="absolute top-[-11px] right-[-11px]">
                             <span class="bg-[#DD3842] py-[1px] px-[7px] rounded-full text-white text-xs">2</span>
                         </div>
                     </div>
-                    <div class="top-[-11px] right-[-11px]">
+                    <div class="hidden md:block top-[-11px] right-[-11px]">
                         <div class="text-xs text-[#515D66] leading-[6px]">Your Cart</div>
                         <div class="font-semibold">$280.000</div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
+        <div class="border-t-2 border-[#E5E8EC]"></div>
     </header>
     <!-- End Header -->
 
@@ -79,4 +94,6 @@
     <div></div>
     <!-- End Banner -->
 </body>
+
+<script src="/public/js/main.js"></script>
 </html>
