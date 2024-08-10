@@ -4,3 +4,7 @@
     -moz-box-shadow: 0px 10px 24px 0px rgba(4, 23, 118, 0.3);
     box-shadow: 0px 10px 24px 0px rgba(4, 23, 118, 0.3);
 }
+
+.hidden-scroll-bar::-webkit-scrollbar {
+    width: 0;
+}

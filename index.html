@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Document</title>
 
+    <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="/public/css/variable.css">
+    <link rel="stylesheet" href="/public/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -87,13 +92,158 @@
             </div>
         </div>
         <div class="border-t-2 border-[#E5E8EC]"></div>
+        <div class="flex justify-between items-center max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto">
+            <ul class="flex items-center">
+                <li class="relative hidden xl:block min-w-[100px] group">
+                    <div class="flex items-center">
+                      <span class="text-black text-md font-semibold px-4 py-3 rounded flex items-center justify-between cursor-pointer bg-white gap-1">
+                        Home
+                      </span>
+                      <img src="/public/icons/.png" alt="">
+                    </div>
+                    <div class="absolute rounded bg-white top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar">
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">Phone</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                    </div>
+                </li>
+                <li class="relative hidden xl:block min-w-[100px] group">
+                    <div class="flex items-center">
+                      <span class="text-black text-md font-semibold px-4 py-3 rounded flex items-center justify-between cursor-pointer bg-white gap-1">
+                        Shop
+                      </span>
+                      <img src="/public/icons/.png" alt="">
+                    </div>
+                    <div class="absolute rounded bg-white top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar">
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">Phone</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                    </div>
+                </li>
+                <li class="relative hidden xl:block min-w-[100px] group">
+                    <div class="flex items-center">
+                      <span class="text-black text-md font-semibold px-4 py-3 rounded flex items-center justify-between cursor-pointer bg-white gap-1">
+                        Product
+                      </span>
+                      <img src="/public/icons/.png" alt="">
+                    </div>
+                    <div class="absolute rounded bg-white top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar">
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">Phone</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                    </div>
+                </li>
+                <li class="relative hidden xl:block min-w-[100px] group">
+                    <div class="flex items-center">
+                      <span class="text-black text-md font-semibold px-4 py-3 rounded flex items-center justify-between cursor-pointer bg-white gap-1">
+                        Page
+                      </span>
+                      <img src="/public/icons/.png" alt="">
+                    </div>
+                    <div class="absolute rounded bg-white top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar">
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">Phone</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                    </div>
+                </li>
+                <li class="relative hidden xl:block min-w-[100px] group">
+                    <div class="flex items-center">
+                      <span class="text-black text-md font-semibold px-4 py-3 rounded flex items-center justify-between cursor-pointer bg-white gap-1">
+                        Blog
+                      </span>
+                      <img src="/public/icons/.png" alt="">
+                    </div>
+                    <div class="absolute rounded bg-white top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar">
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">Phone</div>
+                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                    </div>
+                </li>
+                <li class="w-[100px] text-black text-md font-semibold"><a href="#" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
+                <li class="text-[#DC323C] text-md font-semibold"><a href="#" target="_blank" rel="noopener noreferrer">Buy Uminex!</a></li>
+            </ul>
+            <div class="flex items-center gap-2">
+                <img src="/public/icons/sale-percent.png" alt="">
+                <span class="capitalize">Sale 20% off your First Order</span>
+            </div>
+        </div>
     </header>
     <!-- End Header -->
 
     <!-- Start Banner -->
-    <div></div>
+    <div class="max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/public/images/banner-1.png" alt="">
+              </div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide">Slide 5</div>
+              <div class="swiper-slide">Slide 6</div>
+              <div class="swiper-slide">Slide 7</div>
+              <div class="swiper-slide">Slide 8</div>
+              <div class="swiper-slide">Slide 9</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+    </div>
+    <div class="max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto flex items-center justify-between">
+      <div>
+        <img src="/public/images/subBanner-01.png" alt="">
+      </div>
+      <div>
+        <img src="/public/images/subBanner-02.png" alt="">
+      </div>
+      <div>
+        <img src="/public/images/subBanner-03.png" alt="">
+      </div>
+    </div>
     <!-- End Banner -->
-</body>
 
+    <!-- Start Product -->
+    <div>
+      <div class="grid">
+        <div class="relative">
+          <div><img src="/public/images/item-01.png" alt=""></div>
+          <div class="absolute right-0 top-0 py-1 px-4 bg-[#DC323C] rounded">
+            -20%
+          </div>
+        </div>
+        <div>
+          <div>Samsung Galaxy S21 Ultra 5G 128GB - Black</div>
+          <div>
+            <img src="/public/icons/rate.png" alt="">
+            <span>(680)</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="text-[#DC323C] text-xl font-semibold">$128.00</div>
+            <div class="text-[#8D979E]">$12.00</div>
+          </div>
+          <div class="flex items-center gap-1">
+            <div><img src="/public/icons/check.png" alt=""></div>
+            <span class="text-[#008A00]">In stock</span>
+            <span>82</span>
+            <span>products</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Product -->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="/public/js/main.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+</script>
 </html>
