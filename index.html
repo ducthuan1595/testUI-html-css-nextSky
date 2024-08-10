@@ -17,9 +17,13 @@
         tailwind.config = {
           theme: {
             extend: {
-                maxWidth: {
-                clifford: '#da373d',
+              gridTemplateColumns: {
+                "2/4": "2fr 1fr 1fr 2fr"
               }
+            },
+            colors: {
+              'primary': '#2B38D1',
+              'secondary': '#DC323C'
             }
           }
         }
@@ -61,7 +65,7 @@
                 </div>
                 <div class="hidden xl:block w-[0.5px] h-3 bg-slate-300"></div>
                 <input class="px-2 md:px-5 xl:px-0 lg:w-full xl:w-[270px] outline-none text-sm md:text-md" type="text" placeholder="Search in 200+ products...">
-                <button class="bg-[#2B38D1] py-2 px-2 md:px-3 lg:px-5 xl:px-8 text-white lg:h-[40px] xl:h-[50px] rounded-r hover-shadow text-sm md:text-md" id="btn-search">Search</button>
+                <button class="py-2 px-2 md:px-3 lg:px-5 xl:px-8 text-[#fff] bg-primary lg:h-[40px] xl:h-[50px] rounded-r hover-shadow text-sm md:text-md" id="btn-search">Search</button>
             </div>
             <div class="w-[35%] flex justify-end items-center md:ml-2 gap-4 md:gap-4 lg:gap-6 xl:gap-8">
                 <a href="#" class="flex justify-center items-center gap-2">
@@ -74,14 +78,14 @@
                 <a href="#" class="hidden lg:block relative">
                     <img src="/public/icons/hearth.png" alt="">
                     <div class="absolute top-[-11px] right-[-11px]">
-                        <span class="bg-[#DD3842] py-[1px] px-[7px] rounded-full text-white text-xs">2</span>
+                        <span class="bg-secondary py-[1px] px-[6px] rounded-full text-[#fff] text-xs">2</span>
                     </div>
                 </a>
                 <a href="#" class="flex justify-center items-center gap-4">
                     <div class="relative">
                         <img src="/public/icons/cart.png" alt="">
                         <div class="absolute top-[-11px] right-[-11px]">
-                            <span class="bg-[#DD3842] py-[1px] px-[7px] rounded-full text-white text-xs">2</span>
+                            <span class="bg-secondary py-[1px] px-[6px] rounded-full text-[#fff] text-xs">2</span>
                         </div>
                     </div>
                     <div class="hidden md:block top-[-11px] right-[-11px]">
@@ -163,7 +167,7 @@
                     </div>
                 </li>
                 <li class="w-[100px] text-black text-md font-semibold"><a href="#" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
-                <li class="text-[#DC323C] text-md font-semibold"><a href="#" target="_blank" rel="noopener noreferrer">Buy Uminex!</a></li>
+                <li class="text-secondary text-md font-semibold"><a href="#" target="_blank" rel="noopener noreferrer">Buy Uminex!</a></li>
             </ul>
             <div class="flex items-center gap-2">
                 <img src="/public/icons/sale-percent.png" alt="">
@@ -173,67 +177,361 @@
     </header>
     <!-- End Header -->
 
-    <!-- Start Banner -->
-    <div class="max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="/public/images/banner-1.png" alt="">
+    <!-- Start Body -->
+    <div class="bg-[#F1F5F6]">
+      <!-- Start Banner -->
+      <div class="max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto">
+          <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="/public/images/banner-1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="/public/images/banner-1.png" alt="">
+                </div>
               </div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
+              <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
-          </div>
-    </div>
-    <div class="max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto flex items-center justify-between">
-      <div>
-        <img src="/public/images/subBanner-01.png" alt="">
       </div>
-      <div>
-        <img src="/public/images/subBanner-02.png" alt="">
+      <div class="max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto flex items-center justify-between mt-1 gap-1">
+        <a href="#">
+          <img src="/public/images/subBanner-01.png" alt="">
+        </a>
+        <a href="#">
+          <img src="/public/images/subBanner-02.png" alt="">
+        </a>
+        <a href="#">
+          <img src="/public/images/subBanner-03.png" alt="">
+        </a>
       </div>
-      <div>
-        <img src="/public/images/subBanner-03.png" alt="">
-      </div>
-    </div>
-    <!-- End Banner -->
+      <!-- End Banner -->
+  
+      <!-- Start Product -->
+      <div class="max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto grid grid-cols-1 md:grid-cols-3 bg-[#F1F5F6] py-10 lg:py-14 gap-1">
+        <div class="grid grid-cols-2 gap-1 order-2 md:order-1">
+          <a href="#" class="bg-[#fff] p-2 lg:p-4 child-hover">
+            <div class="relative">
+              <div class="flex justify-center items-center"><img src="/public/images/item-01.png" alt=""></div>
+              <div class="absolute left-0 top-0 py-0.5 px-2 text-xs lg:text-sm text-[#fff] bg-secondary rounded">
+                -20%
+              </div>
+            </div>
+            <div>
+              <div class="font-semibold text-sm xl:text-base leading-5">Samsung Galaxy S21 Ultra 5G 128GB - Black</div>
+              <div class="flex items-center gap-1 mt-1 lg:mt-3 text-xs lg:text-sm xl:text-base">
+                <img src="/public/icons/rate.png" alt="">
+                <span>(68)</span>
+              </div>
+              <div class="flex flex-row md:flex-col lg:flex-row items-center md:items-start lg:items-center gap-2 md:gap-0 lg:gap-2">
+                <div class="text-secondary text-lg lg:text-xl font-semibold">$128.00</div>
+                <div class="text-[#8D979E] line-through leading-[12px]">$12.00</div>
+              </div>
+              <div class="flex flex-row md:flex-col xl:flex-row items-center md:items-start xl:items-center text-xs lg:text-sm mt-2 gap-1">
+                <div class="flex items-center gap-1">
+                  <div><i class="fa-solid fa-check text-[#008A00]"></i></div>
+                  <span class="text-[#008A00]">In stock</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="font-medium">82</span>
+                  <span>products</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="bg-[#fff] p-2 lg:p-4 child-hover">
+            <div class="relative">
+              <div class="flex justify-center items-center"><img src="/public/images/item-01.png" alt=""></div>
+            </div>
+            <div>
+              <div class="font-semibold text-sm xl:text-base leading-5">Samsung Galaxy S21 Ultra 5G 128GB - Black</div>
+              <div class="flex items-center gap-1 mt-1 lg:mt-3 text-xs lg:text-sm xl:text-base">
+                <img src="/public/icons/rate.png" alt="">
+                <span>(68)</span>
+              </div>
+              <div class="flex flex-row md:flex-col lg:flex-row items-center md:items-start lg:items-center gap-2 md:gap-0 lg:gap-2">
+                <div class="text-primary text-lg lg:text-xl font-semibold">$128.00</div>
+              </div>
+              <div class="flex items-center md:items-start xl:items-center text-xs lg:text-sm mt-2 gap-1 text-secondary">
+                <div><i class="fa-solid fa-check text-xs"></i></div>
+                <span>Only</span>
+                <span>2</span>
+                <span>left in store</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="bg-[#fff] p-2 lg:p-4 child-hover">
+            <div class="relative">
+              <div class="flex justify-center items-center"><img src="/public/images/item-01.png" alt=""></div>
+            </div>
+            <div>
+              <div class="font-semibold text-sm xl:text-base leading-5">Samsung Galaxy S21 Ultra 5G 128GB - Black</div>
+              <div class="flex items-center gap-1 mt-1 lg:mt-3 text-xs lg:text-sm xl:text-base">
+                <img src="/public/icons/rate.png" alt="">
+                <span>(68)</span>
+              </div>
+              <div class="flex flex-row md:flex-col lg:flex-row items-center md:items-start lg:items-center gap-2 md:gap-0 lg:gap-2">
+                <div class="text-secondary text-lg lg:text-xl font-semibold">$128.00</div>
+                <div class="text-[#8D979E] line-through leading-[12px]">$12.00</div>
+              </div>
+              <div class="flex flex-row md:flex-col xl:flex-row items-center md:items-start xl:items-center text-xs lg:text-sm mt-2 gap-1">
+                <div class="flex items-center gap-1">
+                  <div><i class="fa-solid fa-check text-[#008A00]"></i></div>
+                  <span class="text-[#008A00]">In stock</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="font-medium">82</span>
+                  <span>products</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="bg-[#fff] p-2 lg:p-4 child-hover">
+            <div class="relative">
+              <div class="flex justify-center items-center"><img src="/public/images/item-01.png" alt=""></div>
+              <div class="absolute left-0 top-0 py-0.5 px-2 text-xs font-light text-[#fff] bg-[#008A00] rounded uppercase">
+                New
+              </div>
+            </div>
+            <div>
+              <div class="font-semibold text-sm xl:text-base leading-5">Samsung Galaxy S21 Ultra 5G 128GB - Black</div>
+              <div class="flex items-center gap-1 mt-1 lg:mt-3 text-xs lg:text-sm xl:text-base">
+                <img src="/public/icons/rate.png" alt="">
+                <span>(68)</span>
+              </div>
+              <div class="flex flex-row md:flex-col lg:flex-row items-center md:items-start lg:items-center gap-2 md:gap-0 lg:gap-2">
+                <div class="text-primary text-lg lg:text-xl font-semibold">$128.00</div>
+              </div>
+              <div class="flex items-center md:items-start xl:items-center text-xs lg:text-sm mt-2 gap-1 text-secondary">
+                <div><i class="fa-solid fa-check text-xs"></i></div>
+                <span>Only</span>
+                <span>2</span>
+                <span>left in store</span>
+              </div>
+            </div>
+          </a>
+        </div>
 
-    <!-- Start Product -->
-    <div>
-      <div class="grid">
-        <div class="relative">
-          <div><img src="/public/images/item-01.png" alt=""></div>
-          <div class="absolute right-0 top-0 py-1 px-4 bg-[#DC323C] rounded">
-            -20%
-          </div>
+        <!-- Start Offer Today -->
+        <div class="border border-secondary border-2 bg-[#fff] rounded p-8 order-first md:order-2">
+          <div class="text-lg lg:text-xl font-semibold uppercase">Today's Offer</div>
+          <div class="border-t-2 border-[#E5E8EC] my-2"></div>
+          <a href="#" class="">
+            <div class="relative p-2 xl:p-10">
+              <div class="flex justify-center"><img class="max-w-full" src="/public/images/item-today.png" alt=""></div>
+              <div class="absolute left-0 top-3 py-0.5 px-2 text-xs xl:text-sm text-[#fff] bg-secondary rounded">
+                -20%
+              </div>
+              <div class="absolute right-0 top-3 p-1 xl:p-2 border border-[#E5E8EC] rounded-full pulsate-fwd">
+                <img src="/public/icons/gift.png" alt="">
+              </div>
+            </div>
+            <div>
+              <div class="font-semibold mb-2">Samsung Galaxy S21 Ultra 5G 128GB - Black</div>
+              <div class="flex items-center gap-1 text-sm text-[#8D979E]">
+                <img src="/public/icons/rate.png" alt="">
+                <span>29</span>
+                <p>reviewers</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="text-secondary text-xl font-semibold">$128.00</div>
+                <div class="text-[#8D979E] line-through">$12.00</div>
+              </div>
+              <div class="mt-3 mb-3">
+                <p class="mb-1">Hurry up! Offer end in</p>
+                <div class="flex items-center gap-2">
+                  <div class="flex justify-center items-center rounded bg-secondary w-10 h-10 md:h-8 lg:h-10 text-center text-[#fff] text-sm lg:text-base">826</div>
+                  <span class="font-semibold">:</span>
+                  <div class="flex justify-center items-center rounded bg-secondary w-10 h-10 md:h-8 lg:h-10 text-center text-[#fff] text-sm lg:text-base">29</div>
+                  <span class="font-semibold">:</span>
+                  <div class="flex justify-center items-center rounded bg-secondary w-10 h-10 md:h-8 lg:h-10 text-center text-[#fff] text-sm lg:text-base">20</div>
+                  <span class="font-semibold">:</span>
+                  <div class="flex justify-center items-center rounded bg-secondary w-10 h-10 md:h-8 lg:h-10 text-center text-[#fff] text-sm lg:text-base">08</div>
+                </div>
+              </div>
+              <div class="slider relative w-full h-5 mt-6">
+                <input type="range" class="out-of-range:border-red-500 absolute left-[-6px] top-0 w-full h-5 bg-transparent z-10" min="0" max="0" value="80">
+                <progress min="0" max="100" value="80"></progress>
+              </div>
+              <div class="text-sm lg:text-base">
+                Sold: <span class="font-semibold">620</span>/<span class="font-semibold">896</span> products
+              </div>
+            </div>
+          </a>
         </div>
-        <div>
-          <div>Samsung Galaxy S21 Ultra 5G 128GB - Black</div>
-          <div>
-            <img src="/public/icons/rate.png" alt="">
-            <span>(680)</span>
+        <!-- End Offer Today -->
+
+        <div class="grid grid-cols-2 gap-1 order-last md:order-3">
+          <a href="#" class="bg-[#fff] p-2 lg:p-4 child-hover">
+            <div class="relative">
+              <div class="flex justify-center items-center"><img src="/public/images/item-01.png" alt=""></div>
+              <div class="absolute left-0 top-0 py-0.5 px-2 text-xs lg:text-sm text-[#fff] bg-secondary rounded">
+                -20%
+              </div>
+            </div>
+            <div>
+              <div class="font-semibold text-sm xl:text-base leading-5">Samsung Galaxy S21 Ultra 5G 128GB - Black</div>
+              <div class="flex items-center gap-1 mt-1 lg:mt-3 text-xs lg:text-sm xl:text-base">
+                <img src="/public/icons/rate.png" alt="">
+                <span>(68)</span>
+              </div>
+              <div class="flex flex-row md:flex-col lg:flex-row items-center md:items-start lg:items-center gap-2 md:gap-0 lg:gap-2">
+                <div class="text-secondary text-lg lg:text-xl font-semibold">$128.00</div>
+                <div class="text-[#8D979E] line-through leading-[12px]">$12.00</div>
+              </div>
+              <div class="flex flex-row md:flex-col xl:flex-row items-center md:items-start xl:items-center text-xs lg:text-sm mt-2 gap-1">
+                <div class="flex items-center gap-1">
+                  <div><i class="fa-solid fa-check text-[#008A00]"></i></div>
+                  <span class="text-[#008A00]">In stock</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="font-medium">82</span>
+                  <span>products</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="bg-[#fff] p-2 lg:p-4 child-hover">
+            <div class="relative">
+              <div class="flex justify-center items-center"><img src="/public/images/item-01.png" alt=""></div>
+            </div>
+            <div>
+              <div class="font-semibold text-sm xl:text-base leading-5">Samsung Galaxy S21 Ultra 5G 128GB - Black</div>
+              <div class="flex items-center gap-1 mt-1 lg:mt-3 text-xs lg:text-sm xl:text-base">
+                <img src="/public/icons/rate.png" alt="">
+                <span>(68)</span>
+              </div>
+              <div class="flex flex-row md:flex-col lg:flex-row items-center md:items-start lg:items-center gap-2 md:gap-0 lg:gap-2">
+                <div class="text-secondary text-lg lg:text-xl font-semibold">$128.00</div>
+                <div class="text-[#8D979E] line-through leading-[12px]">$12.00</div>
+              </div>
+              <div class="flex flex-row md:flex-col xl:flex-row items-center md:items-start xl:items-center text-xs lg:text-sm mt-2 gap-1">
+                <div class="flex items-center gap-1">
+                  <div><i class="fa-solid fa-check text-[#008A00]"></i></div>
+                  <span class="text-[#008A00]">In stock</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="font-medium">82</span>
+                  <span>products</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="bg-[#fff] p-2 lg:p-4 child-hover">
+            <div class="relative">
+              <div class="flex justify-center items-center"><img src="/public/images/item-01.png" alt=""></div>
+            </div>
+            <div>
+              <div class="font-semibold text-sm xl:text-base leading-5">Samsung Galaxy S21 Ultra 5G 128GB - Black</div>
+              <div class="flex items-center gap-1 mt-1 lg:mt-3 text-xs lg:text-sm xl:text-base">
+                <img src="/public/icons/rate.png" alt="">
+                <span>(68)</span>
+              </div>
+              <div class="flex flex-row md:flex-col lg:flex-row items-center md:items-start lg:items-center gap-2 md:gap-0 lg:gap-2">
+                <div class="text-primary text-lg lg:text-xl font-semibold">$128.00</div>
+              </div>
+              <div class="flex items-center md:items-start xl:items-center text-xs lg:text-sm mt-2 gap-1 text-secondary">
+                <div><i class="fa-solid fa-check text-xs"></i></div>
+                <span>Only</span>
+                <span>2</span>
+                <span>left in store</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="bg-[#fff] p-2 lg:p-4 child-hover">
+            <div class="relative">
+              <div class="flex justify-center items-center"><img src="/public/images/item-01.png" alt=""></div>
+            </div>
+            <div>
+              <div class="font-semibold text-sm xl:text-base leading-5">Samsung Galaxy S21 Ultra 5G 128GB - Black</div>
+              <div class="flex items-center gap-1 mt-1 lg:mt-3 text-xs lg:text-sm xl:text-base">
+                <img src="/public/icons/rate.png" alt="">
+                <span>(68)</span>
+              </div>
+              <div class="flex flex-row md:flex-col lg:flex-row items-center md:items-start lg:items-center gap-2 md:gap-0 lg:gap-2">
+                <div class="text-primary text-lg lg:text-xl font-semibold">$128.00</div>
+              </div>
+              <div class="flex items-center md:items-start xl:items-center text-xs lg:text-sm mt-2 gap-1 text-secondary">
+                <div><i class="fa-solid fa-check text-xs"></i></div>
+                <span>Only</span>
+                <span>2</span>
+                <span>left in store</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- End Product -->
+    </div>
+    <!-- End Body -->
+      
+  <!-- Start Footer -->
+  <footer class="bg-[#fff]">
+    <div class="max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2/4 justify-between items-start gap-8 lg:gap-3 xl:gap-0 py-8">
+      <div class="flex flex-col gap-1 text-sm order-3 lg:order-1">
+        <h2 class="font-semibold uppercase text-base mb-2">about the store</h2>
+        <div>Got question? Call us 24/7</div>
+        <div class="text-primary text-xl font-medium mb-2">+222-1800-2626</div>
+        <div>268 St, South New York/NY 98944, United States</div>
+        <div>Customersupport@example.com</div>
+        <div>Info@example.com</div>
+      </div>
+      <div class="flex flex-col gap-2 text-sm col-span-1 order-1 lg:order-2">
+        <h2 class="font-semibold uppercase text-base mb-2">information</h2>
+        <div><a href="#" class="hover:underline">Blog Us</a></div>
+        <div><a href="#" class="hover:underline">About Us</a></div>
+        <div><a href="#" class="hover:underline">Delivery information</a></div>
+        <div><a href="#" class="hover:underline">Privacy Policy</a></div>
+        <div><a href="#" class="hover:underline">FeedBack</a></div>
+      </div>
+      <div class="flex flex-col gap-2 text-sm col-span-1 order-2 lg:order-3">
+        <h2 class="font-semibold uppercase text-base mb-2">quick links</h2>
+        <div class="capitalize"><a href="#" class="hover:underline">Store Location</a></div>
+        <div class="capitalize"><a href="#" class="hover:underline">Orders Tracking</a></div>
+        <div>FAQs</div>
+      </div>
+      <div class="flex flex-col gap-2 text-sm order-4 lg:order-4">
+        <h2 class="font-semibold uppercase text-base mb-2">sign up with newsletter</h2>
+        <div>Join 20.000+ subscribers and get a new discount coupon on every 
+          Saturday. Updates information on Sales and Offers</div>
+        <div class="flex items-center gap-2 my-1">
+          <input type="email" placeholder="Your email address..." class="mt-1 px-3 py-[7px] bg-white border shadow-sm border-[#E5E8EC] placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-2xl sm:text-sm focus:ring-1">
+          <button class="py-2 px-6 bg-primary text-[#fff] rounded-2xl hover-shadow">subscribe</button>
+        </div>
+        <div>Subscribe for Uminex and get 20% off your first purchase.s</div>
+      </div>
+    </div>
+    <div class="border-t-2 border-[#E5E8EC]"></div>
+    <div class="max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto py-6 flex justify-between items-center">
+      <div>Copyright © <span class="text-primary font-medium">Uminex</span> all rights reserved. Powered by <span class="text-primary font-medium">Blueskytechco</span>.</div>
+      <div class="flex items-center gap-4">
+        <div>Payment Method:</div>
+        <div class="flex items-center gap-1">
+          <div class="p-1 border-[1px] border-[#E5E8EC] rounded">
+            <img src="public/icons/method01.png" alt="">
           </div>
-          <div class="flex items-center gap-2">
-            <div class="text-[#DC323C] text-xl font-semibold">$128.00</div>
-            <div class="text-[#8D979E]">$12.00</div>
+          <div class="p-1 border-[1px] border-[#E5E8EC] rounded">
+            <img src="public/icons/method02.png" alt="">
           </div>
-          <div class="flex items-center gap-1">
-            <div><img src="/public/icons/check.png" alt=""></div>
-            <span class="text-[#008A00]">In stock</span>
-            <span>82</span>
-            <span>products</span>
+          <div class="p-1 border-[1px] border-[#E5E8EC] rounded">
+            <img src="public/icons/method03.png" alt="">
           </div>
+          <div class="p-1 border-[1px] border-[#E5E8EC] rounded">
+            <img src="public/icons/method04.png" alt="">
+          </div>
+          <div class="p-1 border-[1px] border-[#E5E8EC] rounded">
+            <img src="public/icons/method05.png" alt="">
+          </div>
+          <div class="p-1 border-[1px] border-[#E5E8EC] rounded">
+            <img src="public/icons/method07.png" alt="">
+          </div>
+          <div class="p-1 border-[1px] border-[#E5E8EC] rounded">
+            <img src="public/icons/method08.png" alt="">
+          </div> 
         </div>
       </div>
     </div>
-    <!-- End Product -->
+  </footer>
+  <!-- End Footer -->
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="/public/js/main.js"></script>
