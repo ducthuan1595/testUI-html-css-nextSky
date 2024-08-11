@@ -17,13 +17,13 @@
         tailwind.config = {
           theme: {
             extend: {
+              colors: {
+                primary: '#2B38D1',
+                secondary: '#DC323C'
+              },
               gridTemplateColumns: {
                 "2/4": "2fr 1fr 1fr 2fr"
               }
-            },
-            colors: {
-              'primary': '#2B38D1',
-              'secondary': '#DC323C'
             }
           }
         }
@@ -64,8 +64,9 @@
                     </div>
                 </div>
                 <div class="hidden xl:block w-[0.5px] h-3 bg-slate-300"></div>
-                <input class="px-2 md:px-5 xl:px-0 lg:w-full xl:w-[270px] outline-none text-sm md:text-md" type="text" placeholder="Search in 200+ products...">
-                <button class="py-2 px-2 md:px-3 lg:px-5 xl:px-8 text-[#fff] bg-primary lg:h-[40px] xl:h-[50px] rounded-r hover-shadow text-sm md:text-md" id="btn-search">Search</button>
+                <input class="px-2 md:px-5 xl:px-0 w-full xl:w-[270px] outline-none text-sm md:text-md p-2 md:p-0" type="text" placeholder="Search in 200+ products...">
+                <i class="block md:hidden pr-2 text-slate-300 fa-solid fa-magnifying-glass"></i>
+                <button class=" hidden md:block py-2 px-2 md:px-3 lg:px-5 xl:px-8 text-[#fff] bg-primary md:h-[40px] xl:h-[50px] rounded-r hover-shadow text-sm md:text-md" id="btn-search">Search</button>
             </div>
             <div class="w-[35%] flex justify-end items-center md:ml-2 gap-4 md:gap-4 lg:gap-6 xl:gap-8">
                 <a href="#" class="flex justify-center items-center gap-2">
@@ -95,81 +96,80 @@
                 </a>
             </div>
         </div>
+        <!-- Start categories -->
         <div class="border-t-2 border-[#E5E8EC]"></div>
         <div class="flex justify-between items-center max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto">
-            <ul class="flex items-center">
-                <li class="relative hidden xl:block min-w-[100px] group">
+            <ul class="flex flex-wrap items-center gap-2 xl:gap-6">
+                <li class="relative group">
                     <div class="flex items-center">
-                      <span class="text-black text-md font-semibold px-4 py-3 rounded flex items-center justify-between cursor-pointer bg-white gap-1">
+                      <span class="text-black text-sm md:text-base font-semibold px-2 md:px-4 py-1 md:py-3 rounded flex items-center justify-between cursor-pointer bg-[#fff] gap-1">
                         Home
                       </span>
                       <img src="/public/icons/.png" alt="">
                     </div>
-                    <div class="absolute rounded bg-white top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar">
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">Phone</div>
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                    <div class="absolute text-sm md:text-base rounded bg-[#fff] top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 min-w-[100px] max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar">
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">Phone</div>
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">MacBook</div>
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">MacBook</div>
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">MacBook</div>
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">MacBook</div>
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">MacBook</div>
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">MacBook</div>
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">MacBook</div>
                     </div>
                 </li>
-                <li class="relative hidden xl:block min-w-[100px] group">
+                <li class="relative group">
                     <div class="flex items-center">
-                      <span class="text-black text-md font-semibold px-4 py-3 rounded flex items-center justify-between cursor-pointer bg-white gap-1">
+                      <span class="text-black text-sm md:text-base font-semibold px-2 md:px-4 py-1 md:py-3 rounded flex items-center justify-between cursor-pointer bg-[#fff] gap-1">
                         Shop
                       </span>
                       <img src="/public/icons/.png" alt="">
                     </div>
-                    <div class="absolute rounded bg-white top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar">
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">Phone</div>
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                    <div class="absolute text-sm md:text-base rounded bg-[#fff] top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 min-w-[100px] max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar">
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">Phone</div>
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">MacBook</div>
                     </div>
                 </li>
-                <li class="relative hidden xl:block min-w-[100px] group">
+                <li class="relative group">
                     <div class="flex items-center">
-                      <span class="text-black text-md font-semibold px-4 py-3 rounded flex items-center justify-between cursor-pointer bg-white gap-1">
+                      <span class="text-black text-sm md:text-base font-semibold px-2 md:px-4 py-1 md:py-3 rounded flex items-center justify-between cursor-pointer bg-[#fff] gap-1">
                         Product
                       </span>
                       <img src="/public/icons/.png" alt="">
                     </div>
-                    <div class="absolute rounded bg-white top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar">
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">Phone</div>
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                    <div class="absolute text-sm md:text-base rounded bg-[#fff] top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 min-w-[100px] max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar">
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">Phone</div>
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">MacBook</div>
                     </div>
                 </li>
-                <li class="relative hidden xl:block min-w-[100px] group">
+                <li class="relative group">
                     <div class="flex items-center">
-                      <span class="text-black text-md font-semibold px-4 py-3 rounded flex items-center justify-between cursor-pointer bg-white gap-1">
+                      <span class="text-black text-sm md:text-base font-semibold px-2 md:px-4 py-1 md:py-3 rounded flex items-center justify-between cursor-pointer bg-[#fff] gap-1">
                         Page
                       </span>
                       <img src="/public/icons/.png" alt="">
                     </div>
-                    <div class="absolute rounded bg-white top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar">
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">Phone</div>
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                    <div class="absolute rounded text-sm md:text-base bg-[#fff] top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 min-w-[100px] max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar">
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">Phone</div>
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">MacBook</div>
                     </div>
                 </li>
-                <li class="relative hidden xl:block min-w-[100px] group">
+                <li class="relative group">
                     <div class="flex items-center">
-                      <span class="text-black text-md font-semibold px-4 py-3 rounded flex items-center justify-between cursor-pointer bg-white gap-1">
+                      <span class="text-black text-sm md:text-base font-semibold px-2 md:px-4 py-1 md:py-3 rounded flex items-center justify-between cursor-pointer bg-[#fff] gap-1">
                         Blog
                       </span>
                       <img src="/public/icons/.png" alt="">
                     </div>
-                    <div class="absolute rounded bg-white top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar">
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">Phone</div>
-                        <div class="px-5 py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-white">MacBook</div>
+                    <div class="absolute rounded bg-[#fff] top-[110%] left-0 right-0 opacity-0 invisible transition-all shadow z-30 min-w-[100px] max-h-[300px] overflow-y-auto group-hover:opacity-100 group-hover:visible hidden-scroll-bar text-sm md:text-base">
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">Phone</div>
+                        <div class="px-2 md:px-5 py-1 md:py-3 text-black cursor-pointer hover:bg-slate-300 hover:text-[#fff]">MacBook</div>
                     </div>
                 </li>
-                <li class="w-[100px] text-black text-md font-semibold"><a href="#" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
-                <li class="text-secondary text-md font-semibold"><a href="#" target="_blank" rel="noopener noreferrer">Buy Uminex!</a></li>
+                <li class="hidden md:block w-[100px] text-black text-md font-semibold"><a href="#" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
+                <li class="hidden md:block text-secondary text-md font-semibold"><a href="#" target="_blank" rel="noopener noreferrer">Buy Uminex!</a></li>
             </ul>
-            <div class="flex items-center gap-2">
+            <div class="hidden lg:flex items-center gap-2">
                 <img src="/public/icons/sale-percent.png" alt="">
                 <span class="capitalize">Sale 20% off your First Order</span>
             </div>
@@ -184,13 +184,27 @@
           <div class="swiper mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="/public/images/banner-1.png" alt="">
+                  <div class="relative">
+                    <img class src="/public/images/banner-1.png" alt="">
+                    <!-- <div class="absolute left-0 top-[50%] translate-y-[-50%] translate-x-1/2 flex flex-col items-start">
+                        <div class="uppercase text-[#FDE50B] text-[8px] md:text-xs mb-1 md:mb-2">GamePad Console</div>
+                        <div class="capitalize text-white text-base md:text-xl md:text-2xl lg:text-4xl font-semibold text-start">
+                          <div>Today's Offer</div>
+                          <div>Skin <span class="text-[#17F084]">Gamepad</span> 2022</div>
+                        </div>
+                        <div>
+                        <button class="uppercase py-1 lg:py-2 px-2 md:px-4 lg:px-8 rounded-2xl bg-white text-black text-[8px] lg:text-sm font-semibold mt-2 md:mt-3">Show Now</button>
+                        </div>
+                    </div> -->
+                  </div>
                 </div>
                 <div class="swiper-slide">
                   <img src="/public/images/banner-1.png" alt="">
                 </div>
               </div>
               <div class="swiper-pagination"></div>
+              <div class="swiper-button-next" id="next"></div>
+              <div class="swiper-button-prev" id="prev"></div>
             </div>
       </div>
       <div class="max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto flex items-center justify-between mt-1 gap-1">
@@ -501,9 +515,9 @@
       </div>
     </div>
     <div class="border-t-2 border-[#E5E8EC]"></div>
-    <div class="max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto py-6 flex justify-between items-center">
+    <div class="max-w-[1200px] mx-5 md:mx-8 lg:mx-16 xl:mx-auto py-6 flex flex-col lg:flex-row justify-start lg:justify-between items-start lg:items-center text-xs xl:text-base gap-2 xl:gap-0">
       <div>Copyright © <span class="text-primary font-medium">Uminex</span> all rights reserved. Powered by <span class="text-primary font-medium">Blueskytechco</span>.</div>
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-1 md:gap-4">
         <div>Payment Method:</div>
         <div class="flex items-center gap-1">
           <div class="p-1 border-[1px] border-[#E5E8EC] rounded">
@@ -541,6 +555,10 @@
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
     });
 </script>
